@@ -8,8 +8,9 @@ Create a virtual machine using the gcloud command line
    exit
 Connect between VM instances
    gcloud compute ssh my-vm-2 
-   ping my-vm-1
-   ssh my-vm-1
+   ping -c 3 my-vm-1
+   exit
+   gcloud compute ssh my-vm-1
    sudo apt-get install nginx-light -y
    sudo nano /var/www/html/index.nginx-debian.html
    curl http://localhost/
